@@ -3,6 +3,9 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import logo from "../public/img/logo.png";
 import Gallery from "../components/gallery";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
+import { faArchive } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -112,10 +115,22 @@ export default function Home() {
         <h2 className={styles.nadpis}>Kde mě najdeš</h2>
 
         <ul className={styles.row}>
-          <li><a href="#">SoundCloud</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Presskit</a></li>
+          <li>
+            <FontAwesomeIcon className={styles.icon} icon={faSoundcloud} />
+            <a href="#">SoundCloud</a>
+          </li>
+          <li>
+            <FontAwesomeIcon className={styles.icon} icon={faFacebook}/>
+            <a href="#">Facebook</a>
+          </li>
+          <li>
+            <FontAwesomeIcon className={styles.icon} icon={faInstagram}/>
+            <a href="#">Instagram</a>
+          </li>
+          <li>
+            <FontAwesomeIcon className={styles.icon} icon={faArchive}/>
+            <a href="#">Presskit</a>
+          </li>
         </ul>
 
       </section>

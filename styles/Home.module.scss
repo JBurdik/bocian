@@ -95,15 +95,27 @@ $lig: 65%;
 }
 
 .footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   .row {
     display: flex;
     flex-flow: row;
-    gap: 2em;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
     li {
-      display: block;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      font-size: 0.5rem;
       transition: all ease-in 250ms;
+      .icon {
+        height: 2.5rem;
+      }
       &:hover{
         color: hsl($hue, $sat, 80%);
       }
